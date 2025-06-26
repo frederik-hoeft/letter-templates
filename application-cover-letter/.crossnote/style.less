@@ -1,0 +1,80 @@
+body {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+.markdown-preview.markdown-preview > .layout {
+  margin: 0;
+}
+.markdown-preview.markdown-preview > .layout td {
+  border: none;
+  padding: 0;
+}
+.markdown-preview.markdown-preview > .layout .header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #000;
+}
+.markdown-preview.markdown-preview > .layout .header > div:first-child {
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview > .layout .content {
+  display: flex;
+  height: 100%;
+  padding: 2rem 3rem 1rem 4rem;
+  flex-direction: column;
+}
+.markdown-preview.markdown-preview > .layout .content.tight {
+  padding: 1rem 3rem 1rem 4rem;
+}
+.markdown-preview.markdown-preview > .layout .content .pagebreak {
+  page-break-before: always;
+}
+.markdown-preview.markdown-preview > .layout .content .gap {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.markdown-preview.markdown-preview > .layout .content .space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.markdown-preview.markdown-preview > .layout .content > .section {
+  margin-top: 0.35rem;
+}
+.markdown-preview.markdown-preview > .layout .content > .section > h4 {
+  display: block;
+  padding-bottom: 0.25rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.markdown-preview.markdown-preview > .layout .content > .section > .date {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+.markdown-preview.markdown-preview > .layout .content > .section > .date.no-margin {
+  margin-top: 0;
+}
+.markdown-preview.markdown-preview > .layout .content > .section > .label-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  row-gap: 0.25rem;
+}
+.markdown-preview.markdown-preview > .layout .content > .section > .label-grid > div:nth-child(odd) {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview > .layout .content > .section > .label-grid > div:nth-child(even) {
+  display: flex;
+}
+.markdown-preview.markdown-preview > .layout .content > .section > .label-grid > div:not(:has(code)) {
+  padding-left: 0.2rem;
+}
